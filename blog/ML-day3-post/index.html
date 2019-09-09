@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>机器学习100天挑战-1/100 — 陈鹏的数据科学之路</title>
-	<meta name="description" content="Title: 机器学习100天挑战-1/100; Date: 2019-09-07; Author: 陈鹏">
+	<title>机器学习100天挑战-3/100 — 陈鹏的数据科学之路</title>
+	<meta name="description" content="Title: 机器学习100天挑战-3/100; Date: 2019-09-10; Author: 陈鹏">
 	<meta name="author" content="陈鹏">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
@@ -26,11 +26,11 @@
 		<div class="col-md-8 col-md-offset-2">
 <div class="article" itemscope itemtype="http://schema.org/BlogPosting">
 	<div class="text-center article-header">
-		<h1 itemprop="name headline" class="article-title">机器学习100天挑战-1/100</h1>
+		<h1 itemprop="name headline" class="article-title">机器学习100天挑战-3/100</h1>
 		<span itemprop="author" itemscope itemtype="http://schema.org/Person">
 			<h4 itemprop="name">陈鹏</h4>
 		</span>
-		<time datetime="2019-09-07T20:00:00+08:00" itemprop="datePublished">2019/09/07</time>
+		<time datetime="2019-09-10T06:00:00+08:00" itemprop="datePublished">2019/09/10</time>
 	</div>
 	<div>
 		Category:
@@ -1159,7 +1159,14 @@ h6:hover .anchor-link {
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */</style><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="https://s2.ax1x.com/2019/09/06/nuDbLQ.jpg" alt="nuDbLQ.jpg" border="0" align="middle"/></p>
+<h1 id="&#22810;&#20803;&#32447;&#24615;&#22238;&#24402;">&#22810;&#20803;&#32447;&#24615;&#22238;&#24402;<a class="anchor-link" href="#&#22810;&#20803;&#32447;&#24615;&#22238;&#24402;">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="https://s2.ax1x.com/2019/09/10/nNmhIx.png" alt="nNmhIx.png" border="0" /></p>
 
 </div>
 </div>
@@ -1167,26 +1174,14 @@ h6:hover .anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>这是我100天机器学习挑战的第一天，我保证每天早上完成一天的学习内容，在此立字为据------陈鹏 20190907</p>
-
+<h2 id="&#31532;1&#27493;:-&#25968;&#25454;&#39044;&#22788;&#29702;">&#31532;1&#27493;: &#25968;&#25454;&#39044;&#22788;&#29702;<a class="anchor-link" href="#&#31532;1&#27493;:-&#25968;&#25454;&#39044;&#22788;&#29702;">&#182;</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Step-1:-Importing-the-libraries">Step 1: Importing the libraries<a class="anchor-link" href="#Step-1:-Importing-the-libraries">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>numpy：包含数学函数</li>
-<li>pandas：导入和管理数据集</li>
-</ul>
-
+<h3 id="&#23548;&#20837;&#24211;">&#23548;&#20837;&#24211;<a class="anchor-link" href="#&#23548;&#20837;&#24211;">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -1195,7 +1190,30 @@ h6:hover .anchor-link {
 <div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#23548;&#20837;&#25968;&#25454;&#38598;">&#23548;&#20837;&#25968;&#25454;&#38598;<a class="anchor-link" href="#&#23548;&#20837;&#25968;&#25454;&#38598;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dataset</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;.</span><span class="se">\\</span><span class="s1">data</span><span class="se">\\</span><span class="s1">50_Startups.csv&#39;</span><span class="p">)</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span> <span class="p">:</span> <span class="p">,</span> <span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+<span class="n">Y</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span> <span class="p">:</span> <span class="p">,</span>  <span class="mi">4</span> <span class="p">]</span><span class="o">.</span><span class="n">values</span>
 </pre></div>
 
     </div>
@@ -1208,79 +1226,7 @@ h6:hover .anchor-link {
 <div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Step-2:-Importing-dataset">Step 2: Importing dataset<a class="anchor-link" href="#Step-2:-Importing-dataset">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>数据集通常在.csv文件中</li>
-<li>csv文件储存表格式数据</li>
-<li>用pandas库里面的read_csv读取本地csv文件作为数据帧（数据帧是什么）</li>
-<li>从数据帧中创建独立的矩阵和独立变量和独立因变量</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dataset</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;.\data\Data.csv&#39;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span> <span class="p">:</span> <span class="p">,</span> <span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>   <span class="c1">## 创建独立变量---选取前三列</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Y</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span> <span class="p">:</span> <span class="p">,</span> <span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>     <span class="c1">## 创建依赖变量-----选取最后一列    返回值的类型仍为 dataframe</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X</span><span class="p">,</span><span class="n">Y</span> <span class="c1"># 观察数据选择是否正确</span>
 </pre></div>
 
     </div>
@@ -1293,133 +1239,71 @@ h6:hover .anchor-link {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[16]:</div>
+    <div class="prompt output_prompt">Out[4]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>array([[&#39;France&#39;, 44.0, 72000.0],
-       [&#39;Spain&#39;, 27.0, 48000.0],
-       [&#39;Germany&#39;, 30.0, 54000.0],
-       [&#39;Spain&#39;, 38.0, 61000.0],
-       [&#39;Germany&#39;, 40.0, nan],
-       [&#39;France&#39;, 35.0, 58000.0],
-       [&#39;Spain&#39;, nan, 52000.0],
-       [&#39;France&#39;, 48.0, 79000.0],
-       [&#39;Germany&#39;, 50.0, 83000.0],
-       [&#39;France&#39;, 37.0, 67000.0]], dtype=object)</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Y</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[17]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>array([&#39;No&#39;, &#39;Yes&#39;, &#39;No&#39;, &#39;No&#39;, &#39;Yes&#39;, &#39;Yes&#39;, &#39;No&#39;, &#39;Yes&#39;, &#39;No&#39;, &#39;Yes&#39;],
-      dtype=object)</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Step-3:-Handling-the-missing-data">Step 3: Handling the missing data<a class="anchor-link" href="#Step-3:-Handling-the-missing-data">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>为了不影响机器学习模型效果，需要处理确实数据</li>
-<li>使用整列的中位数或者平均数表示缺失值</li>
-<li>使用sklearn.preprocessing中的Imputer类</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="k">import</span> <span class="n">Imputer</span>
-<span class="n">imputer</span><span class="o">=</span><span class="n">Imputer</span><span class="p">(</span><span class="n">missing_values</span><span class="o">=</span><span class="s2">&quot;NaN&quot;</span><span class="p">,</span><span class="n">strategy</span><span class="o">=</span><span class="s2">&quot;mean&quot;</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-<span class="n">imputer</span><span class="o">=</span><span class="n">imputer</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">[:,</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">])</span>
-<span class="n">X</span><span class="p">[:,</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span><span class="o">=</span><span class="n">imputer</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X</span><span class="p">[:,</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">])</span> <span class="c1">##将其应用到数据</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[20]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>array([[&#39;France&#39;, 44.0, 72000.0],
-       [&#39;Spain&#39;, 27.0, 48000.0],
-       [&#39;Germany&#39;, 30.0, 54000.0],
-       [&#39;Spain&#39;, 38.0, 61000.0],
-       [&#39;Germany&#39;, 40.0, 63777.77777777778],
-       [&#39;France&#39;, 35.0, 58000.0],
-       [&#39;Spain&#39;, 38.77777777777778, 52000.0],
-       [&#39;France&#39;, 48.0, 79000.0],
-       [&#39;Germany&#39;, 50.0, 83000.0],
-       [&#39;France&#39;, 37.0, 67000.0]], dtype=object)</pre>
+<pre>(array([[165349.2, 136897.8, 471784.1, &#39;New York&#39;],
+        [162597.7, 151377.59, 443898.53, &#39;California&#39;],
+        [153441.51, 101145.55, 407934.54, &#39;Florida&#39;],
+        [144372.41, 118671.85, 383199.62, &#39;New York&#39;],
+        [142107.34, 91391.77, 366168.42, &#39;Florida&#39;],
+        [131876.9, 99814.71, 362861.36, &#39;New York&#39;],
+        [134615.46, 147198.87, 127716.82, &#39;California&#39;],
+        [130298.13, 145530.06, 323876.68, &#39;Florida&#39;],
+        [120542.52, 148718.95, 311613.29, &#39;New York&#39;],
+        [123334.88, 108679.17, 304981.62, &#39;California&#39;],
+        [101913.08, 110594.11, 229160.95, &#39;Florida&#39;],
+        [100671.96, 91790.61, 249744.55, &#39;California&#39;],
+        [93863.75, 127320.38, 249839.44, &#39;Florida&#39;],
+        [91992.39, 135495.07, 252664.93, &#39;California&#39;],
+        [119943.24, 156547.42, 256512.92, &#39;Florida&#39;],
+        [114523.61, 122616.84, 261776.23, &#39;New York&#39;],
+        [78013.11, 121597.55, 264346.06, &#39;California&#39;],
+        [94657.16, 145077.58, 282574.31, &#39;New York&#39;],
+        [91749.16, 114175.79, 294919.57, &#39;Florida&#39;],
+        [86419.7, 153514.11, 0.0, &#39;New York&#39;],
+        [76253.86, 113867.3, 298664.47, &#39;California&#39;],
+        [78389.47, 153773.43, 299737.29, &#39;New York&#39;],
+        [73994.56, 122782.75, 303319.26, &#39;Florida&#39;],
+        [67532.53, 105751.03, 304768.73, &#39;Florida&#39;],
+        [77044.01, 99281.34, 140574.81, &#39;New York&#39;],
+        [64664.71, 139553.16, 137962.62, &#39;California&#39;],
+        [75328.87, 144135.98, 134050.07, &#39;Florida&#39;],
+        [72107.6, 127864.55, 353183.81, &#39;New York&#39;],
+        [66051.52, 182645.56, 118148.2, &#39;Florida&#39;],
+        [65605.48, 153032.06, 107138.38, &#39;New York&#39;],
+        [61994.48, 115641.28, 91131.24, &#39;Florida&#39;],
+        [61136.38, 152701.92, 88218.23, &#39;New York&#39;],
+        [63408.86, 129219.61, 46085.25, &#39;California&#39;],
+        [55493.95, 103057.49, 214634.81, &#39;Florida&#39;],
+        [46426.07, 157693.92, 210797.67, &#39;California&#39;],
+        [46014.02, 85047.44, 205517.64, &#39;New York&#39;],
+        [28663.76, 127056.21, 201126.82, &#39;Florida&#39;],
+        [44069.95, 51283.14, 197029.42, &#39;California&#39;],
+        [20229.59, 65947.93, 185265.1, &#39;New York&#39;],
+        [38558.51, 82982.09, 174999.3, &#39;California&#39;],
+        [28754.33, 118546.05, 172795.67, &#39;California&#39;],
+        [27892.92, 84710.77, 164470.71, &#39;Florida&#39;],
+        [23640.93, 96189.63, 148001.11, &#39;California&#39;],
+        [15505.73, 127382.3, 35534.17, &#39;New York&#39;],
+        [22177.74, 154806.14, 28334.72, &#39;California&#39;],
+        [1000.23, 124153.04, 1903.93, &#39;New York&#39;],
+        [1315.46, 115816.21, 297114.46, &#39;Florida&#39;],
+        [0.0, 135426.92, 0.0, &#39;California&#39;],
+        [542.05, 51743.15, 0.0, &#39;New York&#39;],
+        [0.0, 116983.8, 45173.06, &#39;California&#39;]], dtype=object),
+ array([192261.83, 191792.06, 191050.39, 182901.99, 166187.94, 156991.12,
+        156122.51, 155752.6 , 152211.77, 149759.96, 146121.95, 144259.4 ,
+        141585.52, 134307.35, 132602.65, 129917.04, 126992.93, 125370.37,
+        124266.9 , 122776.86, 118474.03, 111313.02, 110352.25, 108733.99,
+        108552.04, 107404.34, 105733.54, 105008.31, 103282.38, 101004.64,
+         99937.59,  97483.56,  97427.84,  96778.92,  96712.8 ,  96479.51,
+         90708.19,  89949.14,  81229.06,  81005.76,  78239.91,  77798.83,
+         71498.49,  69758.98,  65200.33,  64926.08,  49490.75,  42559.73,
+         35673.41,  14681.4 ]))</pre>
 </div>
 
 </div>
@@ -1431,38 +1315,55 @@ h6:hover .anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Step-4:-Encoding-categorical-data">Step 4: Encoding categorical data<a class="anchor-link" href="#Step-4:-Encoding-categorical-data">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>分类数据：有标签值而不是数字值-例如国家，性别</li>
-<li>分类书籍具有有限的可能值</li>
-<li>编码这些变量使其具有数字值</li>
-<li>需要sklearn.preprocessing中的LabelEncode类,OneHotEncoder</li>
-</ul>
-<p>因为不同国家的地位不同，不能设置1,2,3，而是将不同类别（如不同国家）另外分一列，属于这个国家的设置为1，不属于的设置为零</p>
-
+<h3 id="&#23558;&#31867;&#21035;&#25968;&#25454;&#25968;&#23383;&#21270;">&#23558;&#31867;&#21035;&#25968;&#25454;&#25968;&#23383;&#21270;<a class="anchor-link" href="#&#23558;&#31867;&#21035;&#25968;&#25454;&#25968;&#23383;&#21270;">&#182;</a></h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="k">import</span> <span class="n">LabelEncoder</span><span class="p">,</span><span class="n">OneHotEncoder</span>
-<span class="n">labelencoder_X</span><span class="o">=</span><span class="n">LabelEncoder</span><span class="p">()</span>
-<span class="n">X</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="n">labelencoder_X</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X</span><span class="p">[:,</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">labelencoder</span><span class="o">=</span><span class="n">LabelEncoder</span><span class="p">()</span>
+<span class="n">X</span><span class="p">[:,</span><span class="mi">3</span><span class="p">]</span><span class="o">=</span><span class="n">labelencoder</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X</span><span class="p">[:,</span><span class="mi">3</span><span class="p">])</span><span class="c1"># 把不同类别赋予不同数字</span>
+<span class="n">X</span><span class="p">[:,</span><span class="mi">3</span><span class="p">]</span>
+</pre></div>
 
-<span class="n">onehotencoder</span> <span class="o">=</span> <span class="n">OneHotEncoder</span><span class="p">(</span><span class="n">categorical_features</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-<span class="n">X</span> <span class="o">=</span> <span class="n">onehotencoder</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X</span><span class="p">)</span><span class="o">.</span><span class="n">toarray</span><span class="p">()</span>
+    </div>
+</div>
+</div>
 
-<span class="n">labelencoder_Y</span> <span class="o">=</span> <span class="n">LabelEncoder</span><span class="p">()</span>   <span class="c1">#处理依赖变量</span>
-<span class="n">Y</span> <span class="o">=</span>  <span class="n">labelencoder_Y</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">Y</span><span class="p">)</span>
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[6]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([2, 0, 1, 2, 1, 2, 0, 1, 2, 0, 1, 0, 1, 0, 1, 2, 0, 2, 1, 2, 0, 2,
+       1, 1, 2, 0, 1, 2, 1, 2, 1, 2, 0, 1, 0, 2, 1, 0, 2, 0, 0, 1, 0, 2,
+       0, 2, 1, 0, 2, 0], dtype=object)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">onehotencoder</span> <span class="o">=</span> <span class="n">OneHotEncoder</span><span class="p">(</span><span class="n">categorical_features</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">])</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">onehotencoder</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X</span><span class="p">)</span><span class="o">.</span><span class="n">toarray</span><span class="p">()</span><span class="c1"># 把类别转换到欧式空间，便于之后特征分类</span>
 </pre></div>
 
     </div>
@@ -1483,6 +1384,8 @@ h6:hover .anchor-link {
 If you want the future behaviour and silence this warning, you can specify &#34;categories=&#39;auto&#39;&#34;.
 In case you used a LabelEncoder before this OneHotEncoder to convert the categories to integers, then you can now use the OneHotEncoder directly.
   warnings.warn(msg, FutureWarning)
+D:\ProgramData\Anaconda3\lib\site-packages\sklearn\preprocessing\_encoders.py:451: DeprecationWarning: The &#39;categorical_features&#39; keyword is deprecated in version 0.20 and will be removed in 0.22. You can use the ColumnTransformer instead.
+  &#34;use the ColumnTransformer instead.&#34;, DeprecationWarning)
 </pre>
 </div>
 </div>
@@ -1493,7 +1396,7 @@ In case you used a LabelEncoder before this OneHotEncoder to convert the categor
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">X</span>
@@ -1509,32 +1412,112 @@ In case you used a LabelEncoder before this OneHotEncoder to convert the categor
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[28]:</div>
+    <div class="prompt output_prompt">Out[8]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>array([[1.00000000e+00, 0.00000000e+00, 0.00000000e+00, 4.40000000e+01,
-        7.20000000e+04],
-       [0.00000000e+00, 0.00000000e+00, 1.00000000e+00, 2.70000000e+01,
-        4.80000000e+04],
-       [0.00000000e+00, 1.00000000e+00, 0.00000000e+00, 3.00000000e+01,
-        5.40000000e+04],
-       [0.00000000e+00, 0.00000000e+00, 1.00000000e+00, 3.80000000e+01,
-        6.10000000e+04],
-       [0.00000000e+00, 1.00000000e+00, 0.00000000e+00, 4.00000000e+01,
-        6.37777778e+04],
-       [1.00000000e+00, 0.00000000e+00, 0.00000000e+00, 3.50000000e+01,
-        5.80000000e+04],
-       [0.00000000e+00, 0.00000000e+00, 1.00000000e+00, 3.87777778e+01,
-        5.20000000e+04],
-       [1.00000000e+00, 0.00000000e+00, 0.00000000e+00, 4.80000000e+01,
-        7.90000000e+04],
-       [0.00000000e+00, 1.00000000e+00, 0.00000000e+00, 5.00000000e+01,
-        8.30000000e+04],
-       [1.00000000e+00, 0.00000000e+00, 0.00000000e+00, 3.70000000e+01,
-        6.70000000e+04]])</pre>
+<pre>array([[0.0000000e+00, 0.0000000e+00, 1.0000000e+00, 1.6534920e+05,
+        1.3689780e+05, 4.7178410e+05],
+       [1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 1.6259770e+05,
+        1.5137759e+05, 4.4389853e+05],
+       [0.0000000e+00, 1.0000000e+00, 0.0000000e+00, 1.5344151e+05,
+        1.0114555e+05, 4.0793454e+05],
+       [0.0000000e+00, 0.0000000e+00, 1.0000000e+00, 1.4437241e+05,
+        1.1867185e+05, 3.8319962e+05],
+       [0.0000000e+00, 1.0000000e+00, 0.0000000e+00, 1.4210734e+05,
+        9.1391770e+04, 3.6616842e+05],
+       [0.0000000e+00, 0.0000000e+00, 1.0000000e+00, 1.3187690e+05,
+        9.9814710e+04, 3.6286136e+05],
+       [1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 1.3461546e+05,
+        1.4719887e+05, 1.2771682e+05],
+       [0.0000000e+00, 1.0000000e+00, 0.0000000e+00, 1.3029813e+05,
+        1.4553006e+05, 3.2387668e+05],
+       [0.0000000e+00, 0.0000000e+00, 1.0000000e+00, 1.2054252e+05,
+        1.4871895e+05, 3.1161329e+05],
+       [1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 1.2333488e+05,
+        1.0867917e+05, 3.0498162e+05],
+       [0.0000000e+00, 1.0000000e+00, 0.0000000e+00, 1.0191308e+05,
+        1.1059411e+05, 2.2916095e+05],
+       [1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 1.0067196e+05,
+        9.1790610e+04, 2.4974455e+05],
+       [0.0000000e+00, 1.0000000e+00, 0.0000000e+00, 9.3863750e+04,
+        1.2732038e+05, 2.4983944e+05],
+       [1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 9.1992390e+04,
+        1.3549507e+05, 2.5266493e+05],
+       [0.0000000e+00, 1.0000000e+00, 0.0000000e+00, 1.1994324e+05,
+        1.5654742e+05, 2.5651292e+05],
+       [0.0000000e+00, 0.0000000e+00, 1.0000000e+00, 1.1452361e+05,
+        1.2261684e+05, 2.6177623e+05],
+       [1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 7.8013110e+04,
+        1.2159755e+05, 2.6434606e+05],
+       [0.0000000e+00, 0.0000000e+00, 1.0000000e+00, 9.4657160e+04,
+        1.4507758e+05, 2.8257431e+05],
+       [0.0000000e+00, 1.0000000e+00, 0.0000000e+00, 9.1749160e+04,
+        1.1417579e+05, 2.9491957e+05],
+       [0.0000000e+00, 0.0000000e+00, 1.0000000e+00, 8.6419700e+04,
+        1.5351411e+05, 0.0000000e+00],
+       [1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 7.6253860e+04,
+        1.1386730e+05, 2.9866447e+05],
+       [0.0000000e+00, 0.0000000e+00, 1.0000000e+00, 7.8389470e+04,
+        1.5377343e+05, 2.9973729e+05],
+       [0.0000000e+00, 1.0000000e+00, 0.0000000e+00, 7.3994560e+04,
+        1.2278275e+05, 3.0331926e+05],
+       [0.0000000e+00, 1.0000000e+00, 0.0000000e+00, 6.7532530e+04,
+        1.0575103e+05, 3.0476873e+05],
+       [0.0000000e+00, 0.0000000e+00, 1.0000000e+00, 7.7044010e+04,
+        9.9281340e+04, 1.4057481e+05],
+       [1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 6.4664710e+04,
+        1.3955316e+05, 1.3796262e+05],
+       [0.0000000e+00, 1.0000000e+00, 0.0000000e+00, 7.5328870e+04,
+        1.4413598e+05, 1.3405007e+05],
+       [0.0000000e+00, 0.0000000e+00, 1.0000000e+00, 7.2107600e+04,
+        1.2786455e+05, 3.5318381e+05],
+       [0.0000000e+00, 1.0000000e+00, 0.0000000e+00, 6.6051520e+04,
+        1.8264556e+05, 1.1814820e+05],
+       [0.0000000e+00, 0.0000000e+00, 1.0000000e+00, 6.5605480e+04,
+        1.5303206e+05, 1.0713838e+05],
+       [0.0000000e+00, 1.0000000e+00, 0.0000000e+00, 6.1994480e+04,
+        1.1564128e+05, 9.1131240e+04],
+       [0.0000000e+00, 0.0000000e+00, 1.0000000e+00, 6.1136380e+04,
+        1.5270192e+05, 8.8218230e+04],
+       [1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 6.3408860e+04,
+        1.2921961e+05, 4.6085250e+04],
+       [0.0000000e+00, 1.0000000e+00, 0.0000000e+00, 5.5493950e+04,
+        1.0305749e+05, 2.1463481e+05],
+       [1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 4.6426070e+04,
+        1.5769392e+05, 2.1079767e+05],
+       [0.0000000e+00, 0.0000000e+00, 1.0000000e+00, 4.6014020e+04,
+        8.5047440e+04, 2.0551764e+05],
+       [0.0000000e+00, 1.0000000e+00, 0.0000000e+00, 2.8663760e+04,
+        1.2705621e+05, 2.0112682e+05],
+       [1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 4.4069950e+04,
+        5.1283140e+04, 1.9702942e+05],
+       [0.0000000e+00, 0.0000000e+00, 1.0000000e+00, 2.0229590e+04,
+        6.5947930e+04, 1.8526510e+05],
+       [1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 3.8558510e+04,
+        8.2982090e+04, 1.7499930e+05],
+       [1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 2.8754330e+04,
+        1.1854605e+05, 1.7279567e+05],
+       [0.0000000e+00, 1.0000000e+00, 0.0000000e+00, 2.7892920e+04,
+        8.4710770e+04, 1.6447071e+05],
+       [1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 2.3640930e+04,
+        9.6189630e+04, 1.4800111e+05],
+       [0.0000000e+00, 0.0000000e+00, 1.0000000e+00, 1.5505730e+04,
+        1.2738230e+05, 3.5534170e+04],
+       [1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 2.2177740e+04,
+        1.5480614e+05, 2.8334720e+04],
+       [0.0000000e+00, 0.0000000e+00, 1.0000000e+00, 1.0002300e+03,
+        1.2415304e+05, 1.9039300e+03],
+       [0.0000000e+00, 1.0000000e+00, 0.0000000e+00, 1.3154600e+03,
+        1.1581621e+05, 2.9711446e+05],
+       [1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00,
+        1.3542692e+05, 0.0000000e+00],
+       [0.0000000e+00, 0.0000000e+00, 1.0000000e+00, 5.4205000e+02,
+        5.1743150e+04, 0.0000000e+00],
+       [1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00,
+        1.1698380e+05, 4.5173060e+04]])</pre>
 </div>
 
 </div>
@@ -1542,13 +1525,21 @@ In case you used a LabelEncoder before this OneHotEncoder to convert the categor
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#36530;&#36991;&#34394;&#25311;&#21464;&#37327;&#38519;&#38449;">&#36530;&#36991;&#34394;&#25311;&#21464;&#37327;&#38519;&#38449;<a class="anchor-link" href="#&#36530;&#36991;&#34394;&#25311;&#21464;&#37327;&#38519;&#38449;">&#182;</a></h3>
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Y</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">X</span><span class="p">[:</span> <span class="p">,</span> <span class="mi">1</span><span class="p">:]</span>
+<span class="n">X</span>
 </pre></div>
 
     </div>
@@ -1561,13 +1552,112 @@ In case you used a LabelEncoder before this OneHotEncoder to convert the categor
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[24]:</div>
+    <div class="prompt output_prompt">Out[9]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>array([0, 1, 0, 0, 1, 1, 0, 1, 0, 1])</pre>
+<pre>array([[0.0000000e+00, 1.0000000e+00, 1.6534920e+05, 1.3689780e+05,
+        4.7178410e+05],
+       [0.0000000e+00, 0.0000000e+00, 1.6259770e+05, 1.5137759e+05,
+        4.4389853e+05],
+       [1.0000000e+00, 0.0000000e+00, 1.5344151e+05, 1.0114555e+05,
+        4.0793454e+05],
+       [0.0000000e+00, 1.0000000e+00, 1.4437241e+05, 1.1867185e+05,
+        3.8319962e+05],
+       [1.0000000e+00, 0.0000000e+00, 1.4210734e+05, 9.1391770e+04,
+        3.6616842e+05],
+       [0.0000000e+00, 1.0000000e+00, 1.3187690e+05, 9.9814710e+04,
+        3.6286136e+05],
+       [0.0000000e+00, 0.0000000e+00, 1.3461546e+05, 1.4719887e+05,
+        1.2771682e+05],
+       [1.0000000e+00, 0.0000000e+00, 1.3029813e+05, 1.4553006e+05,
+        3.2387668e+05],
+       [0.0000000e+00, 1.0000000e+00, 1.2054252e+05, 1.4871895e+05,
+        3.1161329e+05],
+       [0.0000000e+00, 0.0000000e+00, 1.2333488e+05, 1.0867917e+05,
+        3.0498162e+05],
+       [1.0000000e+00, 0.0000000e+00, 1.0191308e+05, 1.1059411e+05,
+        2.2916095e+05],
+       [0.0000000e+00, 0.0000000e+00, 1.0067196e+05, 9.1790610e+04,
+        2.4974455e+05],
+       [1.0000000e+00, 0.0000000e+00, 9.3863750e+04, 1.2732038e+05,
+        2.4983944e+05],
+       [0.0000000e+00, 0.0000000e+00, 9.1992390e+04, 1.3549507e+05,
+        2.5266493e+05],
+       [1.0000000e+00, 0.0000000e+00, 1.1994324e+05, 1.5654742e+05,
+        2.5651292e+05],
+       [0.0000000e+00, 1.0000000e+00, 1.1452361e+05, 1.2261684e+05,
+        2.6177623e+05],
+       [0.0000000e+00, 0.0000000e+00, 7.8013110e+04, 1.2159755e+05,
+        2.6434606e+05],
+       [0.0000000e+00, 1.0000000e+00, 9.4657160e+04, 1.4507758e+05,
+        2.8257431e+05],
+       [1.0000000e+00, 0.0000000e+00, 9.1749160e+04, 1.1417579e+05,
+        2.9491957e+05],
+       [0.0000000e+00, 1.0000000e+00, 8.6419700e+04, 1.5351411e+05,
+        0.0000000e+00],
+       [0.0000000e+00, 0.0000000e+00, 7.6253860e+04, 1.1386730e+05,
+        2.9866447e+05],
+       [0.0000000e+00, 1.0000000e+00, 7.8389470e+04, 1.5377343e+05,
+        2.9973729e+05],
+       [1.0000000e+00, 0.0000000e+00, 7.3994560e+04, 1.2278275e+05,
+        3.0331926e+05],
+       [1.0000000e+00, 0.0000000e+00, 6.7532530e+04, 1.0575103e+05,
+        3.0476873e+05],
+       [0.0000000e+00, 1.0000000e+00, 7.7044010e+04, 9.9281340e+04,
+        1.4057481e+05],
+       [0.0000000e+00, 0.0000000e+00, 6.4664710e+04, 1.3955316e+05,
+        1.3796262e+05],
+       [1.0000000e+00, 0.0000000e+00, 7.5328870e+04, 1.4413598e+05,
+        1.3405007e+05],
+       [0.0000000e+00, 1.0000000e+00, 7.2107600e+04, 1.2786455e+05,
+        3.5318381e+05],
+       [1.0000000e+00, 0.0000000e+00, 6.6051520e+04, 1.8264556e+05,
+        1.1814820e+05],
+       [0.0000000e+00, 1.0000000e+00, 6.5605480e+04, 1.5303206e+05,
+        1.0713838e+05],
+       [1.0000000e+00, 0.0000000e+00, 6.1994480e+04, 1.1564128e+05,
+        9.1131240e+04],
+       [0.0000000e+00, 1.0000000e+00, 6.1136380e+04, 1.5270192e+05,
+        8.8218230e+04],
+       [0.0000000e+00, 0.0000000e+00, 6.3408860e+04, 1.2921961e+05,
+        4.6085250e+04],
+       [1.0000000e+00, 0.0000000e+00, 5.5493950e+04, 1.0305749e+05,
+        2.1463481e+05],
+       [0.0000000e+00, 0.0000000e+00, 4.6426070e+04, 1.5769392e+05,
+        2.1079767e+05],
+       [0.0000000e+00, 1.0000000e+00, 4.6014020e+04, 8.5047440e+04,
+        2.0551764e+05],
+       [1.0000000e+00, 0.0000000e+00, 2.8663760e+04, 1.2705621e+05,
+        2.0112682e+05],
+       [0.0000000e+00, 0.0000000e+00, 4.4069950e+04, 5.1283140e+04,
+        1.9702942e+05],
+       [0.0000000e+00, 1.0000000e+00, 2.0229590e+04, 6.5947930e+04,
+        1.8526510e+05],
+       [0.0000000e+00, 0.0000000e+00, 3.8558510e+04, 8.2982090e+04,
+        1.7499930e+05],
+       [0.0000000e+00, 0.0000000e+00, 2.8754330e+04, 1.1854605e+05,
+        1.7279567e+05],
+       [1.0000000e+00, 0.0000000e+00, 2.7892920e+04, 8.4710770e+04,
+        1.6447071e+05],
+       [0.0000000e+00, 0.0000000e+00, 2.3640930e+04, 9.6189630e+04,
+        1.4800111e+05],
+       [0.0000000e+00, 1.0000000e+00, 1.5505730e+04, 1.2738230e+05,
+        3.5534170e+04],
+       [0.0000000e+00, 0.0000000e+00, 2.2177740e+04, 1.5480614e+05,
+        2.8334720e+04],
+       [0.0000000e+00, 1.0000000e+00, 1.0002300e+03, 1.2415304e+05,
+        1.9039300e+03],
+       [1.0000000e+00, 0.0000000e+00, 1.3154600e+03, 1.1581621e+05,
+        2.9711446e+05],
+       [0.0000000e+00, 0.0000000e+00, 0.0000000e+00, 1.3542692e+05,
+        0.0000000e+00],
+       [0.0000000e+00, 1.0000000e+00, 5.4205000e+02, 5.1743150e+04,
+        0.0000000e+00],
+       [0.0000000e+00, 0.0000000e+00, 0.0000000e+00, 1.1698380e+05,
+        4.5173060e+04]])</pre>
 </div>
 
 </div>
@@ -1579,29 +1669,17 @@ In case you used a LabelEncoder before this OneHotEncoder to convert the categor
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Step-5:-Splitting-the-datasets-into-training-sets-and-Test-sets">Step 5: Splitting the datasets into training sets and Test sets<a class="anchor-link" href="#Step-5:-Splitting-the-datasets-into-training-sets-and-Test-sets">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>数据集分成训练集和测试集</li>
-<li>分的比例通常为8:2</li>
-<li>使用sklearn.cross_validation中的train_test_split类</li>
-</ul>
-
+<h3 id="&#25286;&#20998;&#25968;&#25454;&#38598;&#20026;&#35757;&#32451;&#38598;&#21644;&#27979;&#35797;&#38598;">&#25286;&#20998;&#25968;&#25454;&#38598;&#20026;&#35757;&#32451;&#38598;&#21644;&#27979;&#35797;&#38598;<a class="anchor-link" href="#&#25286;&#20998;&#25968;&#25454;&#38598;&#20026;&#35757;&#32451;&#38598;&#21644;&#27979;&#35797;&#38598;">&#182;</a></h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="k">import</span> <span class="n">train_test_split</span>
-<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">Y_train</span><span class="p">,</span> <span class="n">Y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span> <span class="n">X</span> <span class="p">,</span> <span class="n">Y</span> <span class="p">,</span> <span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">Y_train</span><span class="p">,</span> <span class="n">Y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -1609,13 +1687,22 @@ In case you used a LabelEncoder before this OneHotEncoder to convert the categor
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#31532;2&#27493;&#65306;-&#22312;&#35757;&#32451;&#38598;&#19978;&#35757;&#32451;&#22810;&#20803;&#32447;&#24615;&#22238;&#24402;&#27169;&#22411;">&#31532;2&#27493;&#65306; &#22312;&#35757;&#32451;&#38598;&#19978;&#35757;&#32451;&#22810;&#20803;&#32447;&#24615;&#22238;&#24402;&#27169;&#22411;<a class="anchor-link" href="#&#31532;2&#27493;&#65306;-&#22312;&#35757;&#32451;&#38598;&#19978;&#35757;&#32451;&#22810;&#20803;&#32447;&#24615;&#22238;&#24402;&#27169;&#22411;">&#182;</a></h2>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">X_train</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">X_test</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#多元在于X_Train变成了矩阵，而不是线性回归时的向量</span>
+<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="k">import</span> <span class="n">LinearRegression</span>
+<span class="n">regressor</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span>
+<span class="n">regressor</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">Y_train</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -1628,14 +1715,15 @@ In case you used a LabelEncoder before this OneHotEncoder to convert the categor
 
 <div class="output_area">
 
-    <div class="prompt"></div>
+    <div class="prompt output_prompt">Out[11]:</div>
 
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>8
-2
-</pre>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>LinearRegression(copy_X=True, fit_intercept=True, n_jobs=None, normalize=False)</pre>
 </div>
+
 </div>
 
 </div>
@@ -1645,7 +1733,42 @@ In case you used a LabelEncoder before this OneHotEncoder to convert the categor
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Step-6:-Feature-Scaling---&#29305;&#24449;&#32553;&#25918;">Step 6: Feature Scaling---&#29305;&#24449;&#32553;&#25918;<a class="anchor-link" href="#Step-6:-Feature-Scaling---&#29305;&#24449;&#32553;&#25918;">&#182;</a></h2>
+<h2 id="&#31532;3&#27493;:-&#22312;&#27979;&#35797;&#38598;&#19978;&#39044;&#27979;&#32467;&#26524;">&#31532;3&#27493;: &#22312;&#27979;&#35797;&#38598;&#19978;&#39044;&#27979;&#32467;&#26524;<a class="anchor-link" href="#&#31532;3&#27493;:-&#22312;&#27979;&#35797;&#38598;&#19978;&#39044;&#27979;&#32467;&#26524;">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">y_pred</span> <span class="o">=</span> <span class="n">regressor</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#30097;&#38382;">&#30097;&#38382;<a class="anchor-link" href="#&#30097;&#38382;">&#182;</a></h1><p>多元线性回归如何通过图表显示？</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#30693;&#35782;&#28857;&#35814;&#35299;">&#30693;&#35782;&#28857;&#35814;&#35299;<a class="anchor-link" href="#&#30693;&#35782;&#28857;&#35814;&#35299;">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="1.-&#20851;&#20110;&#22810;&#20803;&#32447;&#24615;&#22238;&#24402;">1. &#20851;&#20110;&#22810;&#20803;&#32447;&#24615;&#22238;&#24402;<a class="anchor-link" href="#1.-&#20851;&#20110;&#22810;&#20803;&#32447;&#24615;&#22238;&#24402;">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -1653,106 +1776,149 @@ In case you used a LabelEncoder before this OneHotEncoder to convert the categor
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>使用欧几里得距离</li>
-<li>特征与标度有关，一个特征比其他的特征范围更大，该特征值成为主导</li>
+<li>简单线性回归：影响Y的因素唯一，只有一个。</li>
+<li>多元线性回归：影响Y的因数不唯一，有多个</li>
+<li>一元线性回归方程：Y=aX+b。</li>
+<li>多元线性回归是：Y=aX1+bX2+cX3+…+nXn。</li>
+<li>相当于我们高中学的一元一次方程，变成了n元一次方程。因为y还是那个y。只是自变量增加了。</li>
 </ul>
-<p>$x'= \frac{x-min(x) }{ max(x)-min(x) }$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="2.-&#20851;&#20110;OneHotEncoder()&#32534;&#30721;">2. &#20851;&#20110;OneHotEncoder()&#32534;&#30721;<a class="anchor-link" href="#2.-&#20851;&#20110;OneHotEncoder()&#32534;&#30721;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>在实际的机器学习的应用任务中，特征有时候并不总是连续值，有可能是一些分类值，如性别可分为“male”和“female”。在机器学习任务中，对于这样的特征，通常我们需要对其进行特征数字化，如下面的例子：</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>有如下三个特征属性：</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>使用“特征标准化”-特征等同</li>
+<li>性别：[“male”，“female”]</li>
+<li>地区：[“Europe”，“US”，“Asia”]</li>
+<li>浏览器：[“Firefox”，“Chrome”，“Safari”，“Internet Explorer”]</li>
 </ul>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="k">import</span> <span class="n">StandardScaler</span>
-<span class="n">sc_X</span> <span class="o">=</span> <span class="n">StandardScaler</span><span class="p">()</span>
-<span class="n">X_train</span> <span class="o">=</span> <span class="n">sc_X</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
-<span class="n">X_test</span> <span class="o">=</span> <span class="n">sc_X</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_train</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[33]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>array([[-1.        ,  2.64575131, -0.77459667,  0.26306757,  0.12381479],
-       [ 1.        , -0.37796447, -0.77459667, -0.25350148,  0.46175632],
-       [-1.        , -0.37796447,  1.29099445, -1.97539832, -1.53093341],
-       [-1.        , -0.37796447,  1.29099445,  0.05261351, -1.11141978],
-       [ 1.        , -0.37796447, -0.77459667,  1.64058505,  1.7202972 ],
-       [-1.        , -0.37796447,  1.29099445, -0.0813118 , -0.16751412],
-       [ 1.        , -0.37796447, -0.77459667,  0.95182631,  0.98614835],
-       [ 1.        , -0.37796447, -0.77459667, -0.59788085, -0.48214934]])</pre>
-</div>
-
-</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>通过LabelEncoder将其数字化：</p>
 
 </div>
 </div>
-
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_test</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[34]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>array([[ 0.,  0.,  0., -1., -1.],
-       [ 0.,  0.,  0.,  1.,  1.]])</pre>
-</div>
-
-</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>性别：[0，1]</li>
+<li>地区：[0，1，2]</li>
+<li>浏览器：[0，1，2，3]</li>
+</ul>
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>再用OneHotEncoder进行编码：</p>
 
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>from sklearn.preprocessing import  OneHotEncoder</p>
+<p>enc = OneHotEncoder()
+enc.fit([[0, 0, 3],
+         [1, 1, 0],
+         [0, 2, 1],
+         [1, 0, 2]])
+"""
+如果不加 toarray() 的话，输出的是稀疏的存储格式，即索引加值的形式，
+也可以通过参数指定 sparse = False 来达到同样的效果
+"""
+ans = enc.transform([[0, 1, 3]]).toarray()<br>
+print(ans) # 输出 [[ 1.  0.  0.  1.  0.  0.  0.  0.  1.]]</p>
+<ul>
+<li>解释：对于输入数组，这依旧是把每一行当作一个样本，每一列当作一个特征。</li>
+</ul>
+<p>我们先来看第一个特征，即第一列 [0,1,0,1]，也就是说它有两个取值 0 或者 1，那么 one-hot 就会使用两位来表示这个特征，[1,0] 表示 0， [0,1] 表示 1，在上例输出结果中的前两位 [1,0…] 也就是表示该特征为 0。
+第二个特征，第二列 [0,1,2,0]，它有三种值，那么 one-hot 就会使用三位来表示这个特征，[1,0,0] 表示 0， [0,1,0] 表示 1，[0,0,1] 表示 2，在上例输出结果中的第三位到第六位 […0,1,0,0…] 也就是表示该特征为 1。
+第二个特征，第三列 [3,0,1,2]，它有四种值，那么 one-hot 就会使用四位来表示这个特征，[1,0,0,0] 表示 0， [0,1,0,0] 表示 1，[0,0,1,0] 表示 2，[0,0,0,1] 表示 3，在上例输出结果中的最后四位 […0,0,0,1] 也就是表示该特征为 3
+可以简单理解为“male”“US”“Safari”经过LabelEncoder与OneHotEncoder的编码就变成了：[[1. 0. 0. 1. 0. 0. 0. 0. 1.]]</p>
+<p>更多OneHot编码知识可前往：scikit-learn 中 OneHotEncoder 解析</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="3.-&#20851;&#20110;toarray()">3. &#20851;&#20110;toarray()<a class="anchor-link" href="#3.-&#20851;&#20110;toarray()">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><p>toarray()：将列表转化为数组</p>
+</li>
+<li><p>Python原生没有数组的概念，这点不同于Java之类的面向对象语言。Python中原生的列表使用起来很像数组，但是两者有本质的区别</p>
+</li>
+<li><p>列表与数组的最本质的区别：列表中的所有元素的内存地址可以不是连续的，而数组是连续的。</p>
+</li>
+<li><p>更详细的解释：Python中列表与数组的区别</p>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="4.-&#34394;&#25311;&#21464;&#37327;&#38519;&#38449;">4. &#34394;&#25311;&#21464;&#37327;&#38519;&#38449;<a class="anchor-link" href="#4.-&#34394;&#25311;&#21464;&#37327;&#38519;&#38449;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><p>虚拟变量陷阱是指两个以上（包括两个）变量之间高度相关的情形。简而言之，就是存在一个能被其他变量预测出的变量，举一个存在重复类别（变量）的直观例子：假使我们舍弃男性类别，那么该类别也可以通过女性类别来定义（女性值为0时，表示男性，为1时，表示女性），反之亦然。</p>
+</li>
+<li><p>虚拟变量陷阱这里就简单了解，后面再深入讨论。</p>
+</li>
+</ul>
+
+</div>
+</div>
 </div>
  
 
