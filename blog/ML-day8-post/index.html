@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>机器学习100天挑战-5,6/100 — 陈鹏的数据科学之路</title>
-	<meta name="description" content="Title: 机器学习100天挑战-5,6/100; Date: 2019-09-13; Author: 陈鹏">
+	<title>机器学习100天挑战-8/100 — 陈鹏的数据科学之路</title>
+	<meta name="description" content="Title: 机器学习100天挑战-8/100; Date: 2019-09-16; Author: 陈鹏">
 	<meta name="author" content="陈鹏">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
@@ -26,11 +26,11 @@
 		<div class="col-md-8 col-md-offset-2">
 <div class="article" itemscope itemtype="http://schema.org/BlogPosting">
 	<div class="text-center article-header">
-		<h1 itemprop="name headline" class="article-title">机器学习100天挑战-5,6/100</h1>
+		<h1 itemprop="name headline" class="article-title">机器学习100天挑战-8/100</h1>
 		<span itemprop="author" itemscope itemtype="http://schema.org/Person">
 			<h4 itemprop="name">陈鹏</h4>
 		</span>
-		<time datetime="2019-09-13T06:49:00+08:00" itemprop="datePublished">2019/09/13</time>
+		<time datetime="2019-09-16T06:57:00+08:00" itemprop="datePublished">2019/09/16</time>
 	</div>
 	<div>
 		Category:
@@ -42,7 +42,7 @@
 	<div>
 		Tags:
 		<span itemprop="keywords">
-			<a href="http://chenpeng1987.github.io/tag/shu-ju-jupyter-ji-qi-xue-xi.html" rel="tag">数据 jupyter 机器学习</a>
+			<a href="http://chenpeng1987.github.io/tag/shu-ju-jupyter-ji-qi-xue-xi-luo-ji-hui-gui.html" rel="tag">数据 jupyter 机器学习 逻辑回归</a>
 		</span>
 	</div>
 	<div itemprop="articleBody" class="article-body"><style type="text/css">/*!
@@ -1159,21 +1159,14 @@ h6:hover .anchor-link {
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */</style><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="&#22797;&#20064;">&#22797;&#20064;<a class="anchor-link" href="#&#22797;&#20064;">&#182;</a></h1>
+<h1 id="&#36923;&#36753;&#22238;&#24402;&#32972;&#21518;&#30340;&#25968;&#23398;&#65288;&#36716;&#36733;&#24182;&#20570;&#36866;&#24403;&#20462;&#25913;&#65289;">&#36923;&#36753;&#22238;&#24402;&#32972;&#21518;&#30340;&#25968;&#23398;&#65288;&#36716;&#36733;&#24182;&#20570;&#36866;&#24403;&#20462;&#25913;&#65289;<a class="anchor-link" href="#&#36923;&#36753;&#22238;&#24402;&#32972;&#21518;&#30340;&#25968;&#23398;&#65288;&#36716;&#36733;&#24182;&#20570;&#36866;&#24403;&#20462;&#25913;&#65289;">&#182;</a></h1>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#36923;&#36753;&#22238;&#24402;&#21040;&#24213;&#26159;&#20160;&#20040;">&#36923;&#36753;&#22238;&#24402;&#21040;&#24213;&#26159;&#20160;&#20040;<a class="anchor-link" href="#&#36923;&#36753;&#22238;&#24402;&#21040;&#24213;&#26159;&#20160;&#20040;">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>我们今天来研究一下逻辑回归到底什么，以及他背后的数学是什么。我们需要知道如何计算代价函数，以及如何使用梯度下降法来将代价函数降低到最小。</p>
+<p>原文链接：<a href="http://www.shujuren.org/article/789.html">逻辑回归——详细概述</a></p>
 
 </div>
 </div>
@@ -1181,7 +1174,7 @@ h6:hover .anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>逻辑回归用于解决分类问题</p>
+<p><img src="https://s2.ax1x.com/2019/09/15/ncnHU0.png" alt="ncnHU0.png" border="0" /></p>
 
 </div>
 </div>
@@ -1189,7 +1182,14 @@ h6:hover .anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>我们可以通过使用sigmoid函数把线性回归的解映射到sigmoid空间中</p>
+<p>逻辑回归在20世纪早期应用于生物科学。它后来被用于许多社会科学应用。因变量（目标）为分类变量时采用Logistic回归。<br>
+例如：<br></p>
+<ul>
+<li>预测电子邮件是垃圾邮件（1）还是正常邮件（0）</li>
+<li>肿瘤是否恶性（1）（0）<br></li>
+</ul>
+<p>考虑一个场景，我们需要对电子邮件是否为垃圾邮件进行分类。如果我们用线性回归来解决这个问题，就需要设置一个阈值，根据这个阈值进行分类。假设实际类为恶性，预测连续值为0.4，阈值为0.5，则将数据点划分为良性，会导致严重后果。<br>
+从这个例子可以推断回归不适合分类问题。线性回归是无边界的，逻辑规则则是将值严格控制在0,1之间，非常适合二分类问题。</p>
 
 </div>
 </div>
@@ -1197,7 +1197,15 @@ h6:hover .anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>逻辑回归的损失函数是通过极大似然法推导出来的</p>
+<h1 id="&#31616;&#21333;&#32447;&#24615;&#22238;&#24402;">&#31616;&#21333;&#32447;&#24615;&#22238;&#24402;<a class="anchor-link" href="#&#31616;&#21333;&#32447;&#24615;&#22238;&#24402;">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>完整的源代码：<br>
+<a href="https://github.com/SSaishruthi/LogisticRegression_Vectorized_Implementation/blob/master/Logistic_Regression.ipynb">https://github.com/SSaishruthi/LogisticRegression_Vectorized_Implementation/blob/master/Logistic_Regression.ipynb</a></p>
 
 </div>
 </div>
@@ -1205,7 +1213,9 @@ h6:hover .anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>逻辑回归与线性回归相似，也是使用梯度下降法使损失函数值最小</p>
+<p>模型<br>
+输出：0或1<br>
+假设：Z=WX+B</p>
 
 </div>
 </div>
@@ -1213,7 +1223,7 @@ h6:hover .anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>选择sigmoid函数是因为他是连续函数，可以进行全域求导，并且其值域在0,1之间，大于0.5在正轴区间，小于0.5在负轴区间，从而形成分类</p>
+<p><img src="https://s2.ax1x.com/2019/09/15/ncnjv4.png" alt="ncnjv4.png" border="0" /></p>
 
 </div>
 </div>
@@ -1221,7 +1231,7 @@ h6:hover .anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>将样本的特征和样本发生的概率联系到一起，概率是一个数</strong></p>
+<p>如果Z→∞，Y(预测值)= 1，如果Z→-∞，Y(预测值)= 0。</p>
 
 </div>
 </div>
@@ -1229,7 +1239,14 @@ h6:hover .anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>逻辑回归本身只可以解决二分类问题</p>
+<h2 id="&#20551;&#35774;&#20998;&#26512;">&#20551;&#35774;&#20998;&#26512;<a class="anchor-link" href="#&#20551;&#35774;&#20998;&#26512;">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>假设的输出是估计的概率。这是用来推断当给定输入X时，预测值是实际值的可信度。<br></p>
 
 </div>
 </div>
@@ -1237,80 +1254,7 @@ h6:hover .anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="sigmoid&#20989;&#25968;">sigmoid&#20989;&#25968;<a class="anchor-link" href="#sigmoid&#20989;&#25968;">&#182;</a></h1>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">sigmoid</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
-    <span class="k">return</span> <span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">t</span><span class="p">))</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">500</span><span class="p">)</span>
-<span class="n">y</span><span class="o">=</span><span class="n">sigmoid</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-
-
-<div class="output_png output_subarea ">
-<img src="data:image/png;base64,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
-"
->
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>这条曲线在0,1之间</p>
+<p>X = [x0 x1] = [1 IP-Address]</p>
 
 </div>
 </div>
@@ -1318,14 +1262,7 @@ h6:hover .anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#38382;&#39064;&#65306;&#23545;&#20110;&#32473;&#23450;&#30340;&#26679;&#26412;&#25968;&#25454;&#38598;X&#65292;y&#65292;&#25105;&#20204;&#22914;&#20309;&#25214;&#21040;&#21442;&#25968;theta&#65292;&#20351;&#24471;&#29992;&#36825;&#31181;&#26041;&#24335;&#65292;&#21487;&#20197;&#26368;&#22823;&#31243;&#24230;&#33719;&#24471;&#26679;&#26412;&#25968;&#25454;&#38598;X&#23545;&#24212;&#30340;&#20998;&#31867;&#36755;&#20986;y&#65311;">&#38382;&#39064;&#65306;&#23545;&#20110;&#32473;&#23450;&#30340;&#26679;&#26412;&#25968;&#25454;&#38598;X&#65292;y&#65292;&#25105;&#20204;&#22914;&#20309;&#25214;&#21040;&#21442;&#25968;theta&#65292;&#20351;&#24471;&#29992;&#36825;&#31181;&#26041;&#24335;&#65292;&#21487;&#20197;&#26368;&#22823;&#31243;&#24230;&#33719;&#24471;&#26679;&#26412;&#25968;&#25454;&#38598;X&#23545;&#24212;&#30340;&#20998;&#31867;&#36755;&#20986;y&#65311;<a class="anchor-link" href="#&#38382;&#39064;&#65306;&#23545;&#20110;&#32473;&#23450;&#30340;&#26679;&#26412;&#25968;&#25454;&#38598;X&#65292;y&#65292;&#25105;&#20204;&#22914;&#20309;&#25214;&#21040;&#21442;&#25968;theta&#65292;&#20351;&#24471;&#29992;&#36825;&#31181;&#26041;&#24335;&#65292;&#21487;&#20197;&#26368;&#22823;&#31243;&#24230;&#33719;&#24471;&#26679;&#26412;&#25968;&#25454;&#38598;X&#23545;&#24212;&#30340;&#20998;&#31867;&#36755;&#20986;y&#65311;">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="https://s2.ax1x.com/2019/09/12/nwXJ0S.png" alt="nwXJ0S.png" border="0" width="500" height="500"/></p>
+<p>根据x1值，假设我们得到的估计概率是0.8。这说明电子邮件有80%的可能是垃圾邮件。</p>
 
 </div>
 </div>
@@ -1333,7 +1270,7 @@ h6:hover .anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="https://s2.ax1x.com/2019/09/12/nwXNkQ.png" alt="nwXNkQ.png" border="0" /></p>
+<p>数学可以写成：</p>
 
 </div>
 </div>
@@ -1341,7 +1278,7 @@ h6:hover .anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><a href="https://imgchr.com/i/nwX0lq"><img src="https://s2.ax1x.com/2019/09/12/nwX0lq.png" alt="nwX0lq.png" border="0" /></a></p>
+<p><img src="https://s2.ax1x.com/2019/09/15/ncnxKJ.png" alt="ncnxKJ.png" border="0" /></p>
 
 </div>
 </div>
@@ -1349,14 +1286,7 @@ h6:hover .anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#36716;&#21270;&#20026;&#19968;&#20010;&#20989;&#25968;">&#36716;&#21270;&#20026;&#19968;&#20010;&#20989;&#25968;<a class="anchor-link" href="#&#36716;&#21270;&#20026;&#19968;&#20010;&#20989;&#25968;">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="https://s2.ax1x.com/2019/09/12/nwXh11.png" alt="nwXh11.png" border="0" /></p>
+<p>这说明了“逻辑回归”这个名称的合理性。数据拟合为线性回归模型，再通过logistic函数对目标分类因变量进行预测。</p>
 
 </div>
 </div>
@@ -1364,7 +1294,18 @@ h6:hover .anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="https://s2.ax1x.com/2019/09/12/nwXT0O.png" alt="nwXT0O.png" border="0" /></p>
+<h2 id="&#36923;&#36753;&#22238;&#24402;&#30340;&#31867;&#22411;">&#36923;&#36753;&#22238;&#24402;&#30340;&#31867;&#22411;<a class="anchor-link" href="#&#36923;&#36753;&#22238;&#24402;&#30340;&#31867;&#22411;">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ol>
+<li>二元逻辑回归：分类反应只有两种可能结果。例子:垃圾邮件或非垃圾邮件</li>
+<li>多项逻辑回归：三个或更多的类别，没有排序。例子:预测哪种食物更受欢迎(素食，非素食，纯素食)</li>
+<li>顺序逻辑回归：三个或更多类别的排序。例子:电影分级从1到5</li>
+</ol>
 
 </div>
 </div>
@@ -1372,14 +1313,14 @@ h6:hover .anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#22914;&#20309;&#25214;&#21040;theta">&#22914;&#20309;&#25214;&#21040;theta<a class="anchor-link" href="#&#22914;&#20309;&#25214;&#21040;theta">&#182;</a></h2>
+<h2 id="&#20915;&#31574;&#36793;&#30028;">&#20915;&#31574;&#36793;&#30028;<a class="anchor-link" href="#&#20915;&#31574;&#36793;&#30028;">&#182;</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>使用梯度下降法求解</p>
+<p>为了预测数据点属于哪个类别，可以设置一个阈值。根据这个阈值，将获得的估计概率划分为类别。</p>
 
 </div>
 </div>
@@ -1387,7 +1328,8 @@ h6:hover .anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="https://s2.ax1x.com/2019/09/12/nwXLhd.png" alt="nwXLhd.png" border="0" /></p>
+<p>如果predicted_value≥0.5,电子邮件邮件分类为垃圾邮件反之不是。<br>
+决策边界可以是线性的，也可以是非线性的。多项式阶增加以获得复杂的决策边界。</p>
 
 </div>
 </div>
@@ -1395,7 +1337,14 @@ h6:hover .anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="https://s2.ax1x.com/2019/09/12/nwXX9A.png" alt="nwXX9A.png" border="0" /></p>
+<h2 id="&#25439;&#22833;&#20989;&#25968;">&#25439;&#22833;&#20989;&#25968;<a class="anchor-link" href="#&#25439;&#22833;&#20989;&#25968;">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="https://s2.ax1x.com/2019/09/15/ncu9V1.png" alt="ncu9V1.png" border="0" /></p>
 
 </div>
 </div>
@@ -1403,7 +1352,7 @@ h6:hover .anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="https://s2.ax1x.com/2019/09/12/nwjFhj.png" alt="nwjFhj.png" border="0" /></p>
+<p>为什么用于线性的代价函数不能用于逻辑回归?</p>
 
 </div>
 </div>
@@ -1411,7 +1360,7 @@ h6:hover .anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="https://s2.ax1x.com/2019/09/12/nwjmuV.png" alt="nwjmuV.png" border="0" /></p>
+<p>线性回归以均方误差为代价函数。如果将其用于逻辑回归，则为参数的非凸函数。只有当函数为凸函数时，梯度下降才收敛到全局最小值。</p>
 
 </div>
 </div>
@@ -1419,7 +1368,7 @@ h6:hover .anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><a href="https://imgchr.com/i/nwjnBT"><img src="https://s2.ax1x.com/2019/09/12/nwjnBT.png" alt="nwjnBT.png" border="0" /></a></p>
+<p><img src="https://s2.ax1x.com/2019/09/15/ncuuVI.png" alt="ncuuVI.png" border="0" /></p>
 
 </div>
 </div>
@@ -1427,7 +1376,14 @@ h6:hover .anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="https://s2.ax1x.com/2019/09/12/nwjuHU.png" alt="nwjuHU.png" border="0" /></p>
+<h2 id="&#25439;&#22833;&#20989;&#25968;&#30340;&#35299;&#37322;">&#25439;&#22833;&#20989;&#25968;&#30340;&#35299;&#37322;<a class="anchor-link" href="#&#25439;&#22833;&#20989;&#25968;&#30340;&#35299;&#37322;">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="https://s2.ax1x.com/2019/09/15/ncuKat.jpg" alt="ncuKat.jpg" border="0" /></p>
 
 </div>
 </div>
@@ -1435,7 +1391,7 @@ h6:hover .anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="https://s2.ax1x.com/2019/09/12/nwjQN4.png" alt="nwjQN4.png" border="0" /></p>
+<p><img src="https://s2.ax1x.com/2019/09/15/ncuMIP.jpg" alt="ncuMIP.jpg" border="0" /></p>
 
 </div>
 </div>
@@ -1443,7 +1399,14 @@ h6:hover .anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="https://s2.ax1x.com/2019/09/12/nwjl4J.png" alt="nwjl4J.png" border="0" /></p>
+<h1 id="&#31616;&#21270;&#30340;&#25439;&#22833;&#20989;&#25968;">&#31616;&#21270;&#30340;&#25439;&#22833;&#20989;&#25968;<a class="anchor-link" href="#&#31616;&#21270;&#30340;&#25439;&#22833;&#20989;&#25968;">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="https://s2.ax1x.com/2019/09/16/nRmG28.png" alt="nRmG28.png" border="0" /></p>
 
 </div>
 </div>
@@ -1451,7 +1414,14 @@ h6:hover .anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="https://s2.ax1x.com/2019/09/13/nD4Hwd.png" alt="nD4Hwd.png" border="0" /></p>
+<h1 id="&#20026;&#20160;&#20040;&#36825;&#26159;&#25439;&#22833;&#20989;&#25968;">&#20026;&#20160;&#20040;&#36825;&#26159;&#25439;&#22833;&#20989;&#25968;<a class="anchor-link" href="#&#20026;&#20160;&#20040;&#36825;&#26159;&#25439;&#22833;&#20989;&#25968;">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="https://imgchr.com/i/nRmJxS"><img src="https://s2.ax1x.com/2019/09/16/nRmJxS.jpg" alt="nRmJxS.jpg" border="0" /></a></p>
 
 </div>
 </div>
@@ -1459,7 +1429,7 @@ h6:hover .anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="https://s2.ax1x.com/2019/09/13/nD4LFI.png" alt="nD4LFI.png" border="0" /></p>
+<p>这个负函数是因为当我们训练时，我们需要通过最小化损失函数来最大化概率。假设样本来自相同独立分布，降低成本会增加样本的最大似然。</p>
 
 </div>
 </div>
@@ -1467,7 +1437,14 @@ h6:hover .anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="https://s2.ax1x.com/2019/09/13/nD4OYt.png" alt="nD4OYt.png" border="0" /></p>
+<h1 id="&#25512;&#23548;&#26799;&#24230;&#19979;&#38477;&#31639;&#27861;&#30340;&#20844;&#24335;">&#25512;&#23548;&#26799;&#24230;&#19979;&#38477;&#31639;&#27861;&#30340;&#20844;&#24335;<a class="anchor-link" href="#&#25512;&#23548;&#26799;&#24230;&#19979;&#38477;&#31639;&#27861;&#30340;&#20844;&#24335;">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="https://s2.ax1x.com/2019/09/16/nRmtKg.jpg" alt="nRmtKg.jpg" border="0" /></p>
 
 </div>
 </div>
@@ -1475,7 +1452,15 @@ h6:hover .anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="&#38382;&#39064;&#65306;&#22914;&#20309;&#36827;&#34892;&#21521;&#37327;&#21270;">&#38382;&#39064;&#65306;&#22914;&#20309;&#36827;&#34892;&#21521;&#37327;&#21270;<a class="anchor-link" href="#&#38382;&#39064;&#65306;&#22914;&#20309;&#36827;&#34892;&#21521;&#37327;&#21270;">&#182;</a></h1>
+<p><img src="https://s2.ax1x.com/2019/09/16/nRmNrQ.jpg" alt="nRmNrQ.jpg" border="0" /></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="python&#23454;&#29616;">python&#23454;&#29616;<a class="anchor-link" href="#python&#23454;&#29616;">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -1485,52 +1470,59 @@ h6:hover .anchor-link {
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="k">import</span> <span class="n">accuracy_score</span>
-</pre></div>
+<span class="k">def</span> <span class="nf">weightInitialization</span><span class="p">(</span><span class="n">n_features</span><span class="p">):</span>
+	<span class="n">w</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span><span class="n">n_features</span><span class="p">))</span>
+	<span class="n">b</span><span class="o">=</span><span class="mi">0</span>
+	<span class="k">return</span> <span class="n">w</span><span class="p">,</span><span class="n">b</span>
 
-    </div>
-</div>
-</div>
+<span class="k">def</span> <span class="nf">sigmoid_activation</span><span class="p">(</span><span class="n">result</span><span class="p">):</span>
+	<span class="n">final_result</span><span class="o">=</span><span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">result</span><span class="p">))</span>
+	<span class="k">return</span> <span class="n">final_result</span>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">LogisticRegression</span><span class="p">:</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&#39;&#39;&#39;初始化logistic Regression模型&#39;&#39;&#39;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">coef_</span><span class="o">=</span><span class="kc">None</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">intercept</span><span class="o">=</span><span class="kc">None</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_theta</span><span class="o">=</span><span class="kc">None</span>
-    <span class="k">def</span> <span class="nf">_sigmoid</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">t</span><span class="p">):</span>
-        <span class="sd">&#39;&#39;&#39;_表示私有函数&#39;&#39;&#39;</span>
-        <span class="k">return</span> <span class="mf">1.</span><span class="o">/</span><span class="p">(</span><span class="mf">1.</span><span class="o">+</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">t</span><span class="p">))</span>
-    <span class="k">def</span> <span class="nf">fit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">X_train</span><span class="p">,</span><span class="n">y_train</span><span class="p">,</span><span class="n">eta</span><span class="o">=</span><span class="mf">0.01</span><span class="p">,</span><span class="n">n_iters</span><span class="o">=</span><span class="mf">1e4</span><span class="p">):</span>
-        <span class="sd">&#39;&#39;&#39;根据训练集使用梯度下降法训练逻辑回归模型&#39;&#39;&#39;</span>
-        <span class="k">assert</span> <span class="n">X_train</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">==</span><span class="n">y_train</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>\
-        <span class="s2">&quot;the size of X_train must be equal to the size of y_train&quot;</span>
-        
-        <span class="k">def</span> <span class="nf">J</span><span class="p">(</span><span class="n">theta</span><span class="p">,</span><span class="n">X_b</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
-            <span class="n">y_hat</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_sigmoid</span><span class="p">(</span><span class="n">X_b</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">theta</span><span class="p">))</span>
-            <span class="k">try</span><span class="p">:</span>
-                <span class="k">return</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">y</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">y_hat</span><span class="p">)</span><span class="o">+</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">y</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">y_hat</span><span class="p">))</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
-            <span class="k">except</span><span class="p">:</span>
-                <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="s1">&#39;inf&#39;</span><span class="p">)</span>
-        <span class="c1">#求梯度</span>
-        <span class="k">def</span> <span class="nf">dJ</span><span class="p">(</span><span class="n">theta</span><span class="p">,</span><span class="n">X_b</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
-            <span class="k">return</span> <span class="n">X_b</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_sigmoid</span><span class="p">(</span><span class="n">X_b</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">theta</span><span class="p">))</span><span class="o">-</span><span class="n">y</span><span class="p">)</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">X_b</span><span class="p">)</span>
-        
-        <span class="c1">#梯度下降算法</span>
-        
-        <span class="c1">#预测函数</span>
-        
-        
-        
-        
-    
-        
+<span class="k">def</span> <span class="nf">model_optimize</span><span class="p">(</span><span class="n">w</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">X</span><span class="p">,</span><span class="n">Y</span><span class="p">):</span>
+	<span class="n">m</span><span class="o">=</span><span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+	<span class="c1">#Prediction</span>
+	<span class="n">final_result</span><span class="o">=</span><span class="n">sigmoid_activation</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">w</span><span class="p">,</span><span class="n">X</span><span class="o">.</span><span class="n">T</span><span class="p">)</span><span class="o">+</span><span class="n">b</span><span class="p">)</span>
+	<span class="n">Y_T</span><span class="o">=</span><span class="n">Y</span><span class="o">.</span><span class="n">T</span>
+	<span class="n">a</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">((</span><span class="n">Y_T</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">final_result</span><span class="p">))</span><span class="o">+</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">Y_T</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">final_result</span><span class="p">))</span>
+	<span class="n">cost</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="n">m</span><span class="p">)</span><span class="o">*</span><span class="n">a</span>
+
+	<span class="c1">#Gradient caculation</span>
+	<span class="n">dw</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">m</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">T</span><span class="p">,(</span><span class="n">final_result</span><span class="o">-</span><span class="n">Y</span><span class="o">.</span><span class="n">T</span><span class="p">)</span><span class="o">.</span><span class="n">T</span><span class="p">))</span>
+	<span class="n">db</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">m</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">final_result</span><span class="o">-</span><span class="n">Y</span><span class="o">.</span><span class="n">T</span><span class="p">))</span>
+
+	<span class="n">grads</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;dw&#39;</span><span class="p">:</span><span class="n">dw</span><span class="p">,</span><span class="s1">&#39;db&#39;</span><span class="p">:</span><span class="n">db</span><span class="p">}</span>
+
+	<span class="k">return</span> <span class="n">grads</span><span class="p">,</span><span class="n">cost</span>
+
+<span class="k">def</span> <span class="nf">model_predict</span><span class="p">(</span><span class="n">w</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">X</span><span class="p">,</span><span class="n">Y</span><span class="p">,</span><span class="n">learning_rate</span><span class="p">,</span><span class="n">no_iterations</span><span class="p">):</span>
+	<span class="n">costs</span><span class="o">=</span><span class="p">[]</span>
+	<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">no_iterations</span><span class="p">):</span>
+		<span class="c1">#</span>
+		<span class="n">grads</span><span class="p">,</span><span class="n">cost</span><span class="o">=</span><span class="n">model_optimize</span><span class="p">(</span><span class="n">w</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">X</span><span class="p">,</span><span class="n">Y</span><span class="p">)</span>
+		<span class="c1">#</span>
+		<span class="n">dw</span><span class="o">=</span><span class="n">grads</span><span class="p">[</span><span class="s1">&#39;dw&#39;</span><span class="p">]</span>
+		<span class="n">db</span><span class="o">=</span><span class="n">grads</span><span class="p">[</span><span class="s1">&#39;db&#39;</span><span class="p">]</span>
+		<span class="c1">#weight update</span>
+		<span class="n">w</span><span class="o">=</span><span class="n">w</span><span class="o">-</span><span class="p">(</span><span class="n">learning_rate</span><span class="o">*</span><span class="p">(</span><span class="n">dw</span><span class="o">.</span><span class="n">T</span><span class="p">))</span>
+		<span class="n">b</span><span class="o">=</span><span class="n">b</span><span class="o">-</span><span class="p">(</span><span class="n">learning_rate</span><span class="o">*</span><span class="n">db</span><span class="p">)</span>
+		<span class="c1">#</span>
+
+		<span class="k">if</span> <span class="p">(</span><span class="n">i</span><span class="o">%</span><span class="k">100</span>==0):
+			<span class="n">costs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">cost</span><span class="p">)</span>
+			<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Cost after </span><span class="si">%i</span><span class="s2"> iteration is </span><span class="si">%f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">cost</span><span class="p">))</span>
+	<span class="c1">#final parameters</span>
+	<span class="n">coeff</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;w&#39;</span><span class="p">:</span><span class="n">w</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">:</span><span class="n">b</span><span class="p">}</span>
+	<span class="n">gradient</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;dw&#39;</span><span class="p">:</span><span class="n">dw</span><span class="p">,</span><span class="s1">&#39;db&#39;</span><span class="p">:</span><span class="n">db</span><span class="p">}</span>
+
+	<span class="k">return</span> <span class="n">coeff</span><span class="p">,</span><span class="n">gradient</span><span class="p">,</span><span class="n">costs</span>
+
+<span class="k">def</span> <span class="nf">predict</span><span class="p">(</span><span class="n">final_pred</span><span class="p">,</span><span class="n">m</span><span class="p">):</span>
+	<span class="n">y_pred</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span><span class="n">m</span><span class="p">))</span>
+	<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">final_pred</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]):</span>
+		<span class="k">if</span> <span class="n">final_pred</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">&gt;</span><span class="mf">0.5</span><span class="p">:</span>
+			<span class="n">y_pred</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="mi">1</span>
+	<span class="k">return</span> <span class="n">y_pred</span>
 </pre></div>
 
     </div>
@@ -1541,10 +1533,47 @@ h6:hover .anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><a href="https://github.com/MLEveryday/100-Days-Of-ML-Code/blob/master/README.md">逻辑回归实现</a></p>
+<h1 id="&#25104;&#26412;&#19982;&#36845;&#20195;&#27425;&#25968;">&#25104;&#26412;&#19982;&#36845;&#20195;&#27425;&#25968;<a class="anchor-link" href="#&#25104;&#26412;&#19982;&#36845;&#20195;&#27425;&#25968;">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>系统的训练和测试精度为100%<br>
+此实现用于二元逻辑回归。对于超过两个类的数据，必须使用softmax回归。</p>
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>完整的代码:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="https://github.com/SSaishruthi/LogisticRegression_Vectorized_Implementation/blob/master/Logistic_Regression.ipynb">https://github.com/SSaishruthi/LogisticRegression_Vectorized_Implementation/blob/master/Logistic_Regression.ipynb</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
 </div>
  
 
